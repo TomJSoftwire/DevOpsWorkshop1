@@ -1,6 +1,6 @@
 import math
 
-allowed_operators = {'/','x','+','-','%'}
+allowed_operators = {'/','x','+','-','%','^'}
 
 def parse_calculation (parameter_list):
 
@@ -33,6 +33,8 @@ def execute_calculation(parsed_calculation):
             return first_num / second_num
         case '%':
             return first_num % second_num
+        case '^':
+            return first_num ** second_num
 
 def handle_calculation(calc):
     return execute_calculation(parse_calculation(calc))
